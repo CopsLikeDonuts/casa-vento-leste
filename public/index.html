@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Casa Vento Leste</title>
+    <script>
+      // Pick the visitor's language, Portuguese by default.
+      var l = (navigator.language || 'pt').slice(0, 2).toLowerCase();
+      location.replace('/' + (l === 'en' || l === 'de' ? l : 'pt') + '/' + location.hash);
+    </script>
+    <noscript><meta http-equiv="refresh" content="0; url=/pt/" /></noscript>
+  </head>
+  <body>
+    <a href="/pt/">Casa Vento Leste</a>
+  </body>
+</html>

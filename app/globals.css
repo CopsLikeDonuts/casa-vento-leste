@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* Colours come from site.config.ts through CSS variables set in app/[lang]/layout.tsx. */
+@theme inline {
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+  --color-wall: var(--wall);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-savings: var(--savings);
+  --color-highlight: var(--highlight);
+  --color-focus: var(--focus);
+  --font-display: var(--font-caprasimo), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-rethink), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--wall);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* The painted-door arch: a semicircle on top, square at the threshold. */
+.door-arch {
+  border-radius: 9999px 9999px 6px 6px / 9999px 9999px 6px 6px;
+}
